@@ -138,9 +138,9 @@ const lives: Live[] = [
 
 const mamonoRank = (countMamono: number): string => {
   if (countMamono >= 10) {
-    return "知り合いの魔物"
+    return "友達の魔物"
   } else if (5 <= countMamono && countMamono < 10) {
-    return "魔物"
+    return "知り合いの魔物"
   } else if (2 <= countMamono && countMamono < 5) {
     return "見たことある魔物"
   } else {
