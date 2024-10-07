@@ -64,6 +64,13 @@ const lives: Live[] = [
     ]
   },
   {
+    title: "J-WAVE presents INSPIRE TOKYO 2024 -Best Music & Market-",
+    detail: {
+      date: "2024-07-13",
+      mamono: false
+    }
+  },
+  {
     title: "OSAKA GIGANTIC MUSIC FESTIVAL 2024",
     detail: {
       date: "2024-07-20",
