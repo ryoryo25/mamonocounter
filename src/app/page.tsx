@@ -182,10 +182,11 @@ const Home = () => {
                 const info = stage.info ? ` (${stage.info})` : ""
                 const date = new Date(stage.date)
                 const datestr = `${date.getMonth()}/${date.getDate()}`
+                const label = `${live.title} ${no}${info} (${datestr})`
                 return (
-                  <label>
+                  <label key={label}>
                     <input type="checkbox" value={Number(stage.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
-                    {`${live.title} ${no}${info} (${datestr})`}
+                    {label}
                   </label>
                 )
               })
@@ -193,10 +194,11 @@ const Home = () => {
               const date = new Date(live.detail.date)
               const datestr = `${date.getMonth()}/${date.getDate()}`
               const info = live.detail.info ? ` (${live.detail.info})` : ""
+              const label = `${live.title}${info} (${datestr})`
               return (
-                <label>
+                <label key={label}>
                   <input type="checkbox" value={Number(live.detail.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
-                  {`${live.title}${info} (${datestr})`}
+                  {label}
                 </label>
               )
             }
