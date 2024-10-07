@@ -136,8 +136,11 @@ const lives: Live[] = [
   }
 ]
 
-const mamonoRank = (countMamono: number): string => {
-  if (countMamono >= 10) {
+const mamonoRank = (countParticipated: number, countMamono: number): string => {
+  const maxParticipated = lives.length
+  if (countParticipated === maxParticipated) {
+    return "魔物"
+  } else if (countMamono >= 10) {
     return "友達の魔物"
   } else if (5 <= countMamono && countMamono < 10) {
     return "知り合いの魔物"
@@ -165,7 +168,7 @@ const Home = () => {
     if (resultRank === null || resultDetail === null) {
       return
     }
-    const rank = mamonoRank(countMamono)
+    const rank = mamonoRank(countParticipated, countMamono)
     resultRank.innerHTML = `あなたは「${rank}」`
     resultDetail.innerHTML = `参加した公演数: ${countParticipated}<br>参加した見たことない魔物: ${countMamono}`
   }
