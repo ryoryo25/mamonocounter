@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "見たことない魔物カウンター",
-  description: "何回見たことない魔物を見たか数えます",
+  description: "何回「見たことない魔物」を見たかをカウント",
 };
 
 export default function RootLayout({
