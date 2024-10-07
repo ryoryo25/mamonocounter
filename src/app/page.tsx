@@ -1,101 +1,217 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { ChangeEvent, useState } from "react";
+
+type Live = {
+  title: string
+  detail: LiveDetail | LiveDetail[]
+}
+
+type LiveDetail = {
+  date: string
+  mamono: boolean
+  no?: string
+  info?: string
+}
+
+const lives: Live[] = [
+  {
+    title: "ユニ春！ライブ2024",
+    detail: {
+      date: "2024-03-09",
+      mamono: true
+    }
+  },
+  {
+    title: "齊藤京子卒業コンサート",
+    detail: {
+      date: "2024-04-05",
+      mamono: false
+    }
+  },
+  {
+    title: "5回目のひな誕祭",
+    detail: [
+      {
+        date: "2024-04-06",
+        mamono: true
+      },
+      {
+        date: "2024-04-07",
+        mamono: true
+      }
+    ],
+  },
+  {
+    title: "CHAGU CHAGU ROCK FESTIVAL 2024",
+    detail: {
+      date: "2024-06-08",
+      mamono: false
+    }
+  },
+  {
+    title: "11th Single ひなた坂46 LIVE",
+    detail: [
+      {
+        date: "2024-07-03",
+        mamono: false
+      },
+      {
+        date: "2024-07-04",
+        mamono: false,
+        info: "高本彩花卒セレ"
+      }
+    ]
+  },
+  {
+    title: "OSAKA GIGANTIC MUSIC FESTIVAL 2024",
+    detail: {
+      date: "2024-07-20",
+      mamono: true
+    }
+  },
+  {
+    title: "TOKYO IDOL FESTIVAL 2024",
+    detail: {
+      date: "2024-08-04",
+      mamono: false
+    }
+  },
+  {
+    title: "日向坂46 「四期生ライブ」",
+    detail: [
+      {
+        date: "2024-08-27",
+        mamono: true
+      },
+      {
+        date: "2024-08-28",
+        mamono: true
+      },
+      {
+        date: "2024-08-29",
+        mamono: true
+      }
+    ]
+  },
+  {
+    title: "Song for 能登！24時間テレビチャリティーライブ",
+    detail: {
+      date: "2024-08-31",
+      mamono: true
+    }
+  },
+  {
+    title: "ひなたフェス2024",
+    detail: [
+      {
+        date: "2024-09-07",
+        mamono: true
+      },
+      {
+        date: "2024-09-08",
+        mamono: true
+      }
+    ]
+  },
+  {
+    title: "日向坂ミュージックパレードLIVE",
+    detail: [
+      {
+        date: "2024-10-05",
+        mamono: true,
+        no: "Day1夜公演"
+      },
+      {
+        date: "2024-10-06",
+        mamono: true,
+        no: "Day2昼公演"
+      },
+      {
+        date: "2024-10-06",
+        mamono: true,
+        no: "Day2夜公演"
+      }
+    ]
+  }
+]
+
+const mamonoRank = (countMamono: number): string => {
+  if (countMamono >= 10) {
+    return "知り合いの魔物"
+  } else if (5 <= countMamono && countMamono < 10) {
+    return "魔物"
+  } else if (2 <= countMamono && countMamono < 5) {
+    return "見たことある魔物"
+  } else {
+    return "見たことない魔物"
+  }
+}
+
+const Home = () => {
+  const [countParticipated, setCountParticipated] = useState(0)
+  const [countMamono, setCountMamono] = useState(0)
+
+  const checkboxChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const checked = event.target.checked
+    const value = Number(event.target.value)
+    setCountParticipated(countParticipated + (checked ? 1 : -1))
+    setCountMamono(countMamono + (checked ? value : -value))
+  }
+
+  const calculate = () => {
+    const resultRank = document.getElementById("resultRank")
+    const resultDetail = document.getElementById("resultDetail")
+    if (resultRank === null || resultDetail === null) {
+      return
+    }
+    const rank = mamonoRank(countMamono)
+    resultRank.innerHTML = `あなたは「${rank}」`
+    resultDetail.innerHTML = `参加した公演数: ${countParticipated}<br>参加した見たことない魔物: ${countMamono}`
+  }
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen mt-20">
+      <div className="mx-auto max-w-2xl px-8 mb-32">
+        <h1 className="text-3xl font-bold mb-10 flex justify-center">見たことない魔物カウンター</h1>
+        <div className="flex flex-col gap-4 mb-8">
+          {lives.map(live => {
+            if (Array.isArray(live.detail)) {
+              return live.detail.map((stage, i) => {
+                const no = stage.no ? stage.no : "Day" + (i + 1)
+                const info = stage.info ? ` (${stage.info})` : ""
+                const date = new Date(stage.date)
+                const datestr = `${date.getMonth()}/${date.getDate()}`
+                return (
+                  <label>
+                    <input type="checkbox" value={Number(stage.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
+                    {`${live.title} ${no}${info} (${datestr})`}
+                  </label>
+                )
+              })
+            } else {
+              const date = new Date(live.detail.date)
+              const datestr = `${date.getMonth()}/${date.getDate()}`
+              const info = live.detail.info ? ` (${live.detail.info})` : ""
+              return (
+                <label>
+                  <input type="checkbox" value={Number(live.detail.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
+                  {`${live.title}${info} (${datestr})`}
+                </label>
+              )
+            }
+          })}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex justify-center mb-8">
+          <button className="border-neutral-500 border-2 border-spacing-2 rounded" onClick={calculate}>計算する</button>
+        </div>
+        <div className="flex flex-col">
+          <h2 id="resultRank" className="text-3xl font-bold mb-8 text-center" />
+          <div id="resultDetail" />
+        </div>
+      </div>
+    </main>
   );
 }
+
+export default Home
