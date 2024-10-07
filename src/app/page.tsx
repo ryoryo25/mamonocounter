@@ -158,6 +158,10 @@ const mamonoRank = (countParticipated: number, countMamono: number): string => {
   }
 }
 
+const getDateString = (date: Date): string => {
+  return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
+}
+
 const Home = () => {
   const [countParticipated, setCountParticipated] = useState(0)
   const [countMamono, setCountMamono] = useState(0)
@@ -190,8 +194,7 @@ const Home = () => {
               return live.detail.map((stage, i) => {
                 const no = stage.no ? stage.no : "Day" + (i + 1)
                 const info = stage.info ? ` (${stage.info})` : ""
-                const date = new Date(stage.date)
-                const datestr = `${date.getMonth()}/${date.getDate()}`
+                const datestr = getDateString(new Date(stage.date))
                 const label = `${live.title} ${no}${info} (${datestr})`
                 return (
                   <label key={label}>
@@ -201,8 +204,7 @@ const Home = () => {
                 )
               })
             } else {
-              const date = new Date(live.detail.date)
-              const datestr = `${date.getMonth()}/${date.getDate()}`
+              const datestr = getDateString(new Date(live.detail.date))
               const info = live.detail.info ? ` (${live.detail.info})` : ""
               const label = `${live.title}${info} (${datestr})`
               return (
