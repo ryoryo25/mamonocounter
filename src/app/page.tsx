@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from "react";
 
 type Live = {
   title: string
-  detail: LiveDetail | LiveDetail[]
+  detail: LiveDetail[]
 }
 
 type LiveDetail = {
@@ -17,17 +17,21 @@ type LiveDetail = {
 const lives: Live[] = [
   {
     title: "ユニ春！ライブ2024",
-    detail: {
-      date: "2024-03-09",
-      mamono: true
-    }
+    detail: [
+      {
+        date: "2024-03-09",
+        mamono: true
+      }
+    ]
   },
   {
     title: "齊藤京子卒業コンサート",
-    detail: {
-      date: "2024-04-05",
-      mamono: false
-    }
+    detail: [
+      {
+        date: "2024-04-05",
+        mamono: false
+      }
+    ]
   },
   {
     title: "5回目のひな誕祭",
@@ -44,10 +48,12 @@ const lives: Live[] = [
   },
   {
     title: "CHAGU CHAGU ROCK FESTIVAL 2024",
-    detail: {
-      date: "2024-06-08",
-      mamono: false
-    }
+    detail: [
+      {
+        date: "2024-06-08",
+        mamono: false
+      }
+    ]
   },
   {
     title: "11th Single ひなた坂46 LIVE",
@@ -65,24 +71,30 @@ const lives: Live[] = [
   },
   {
     title: "J-WAVE presents INSPIRE TOKYO 2024 -Best Music & Market-",
-    detail: {
-      date: "2024-07-13",
-      mamono: false
-    }
+    detail: [
+      {
+        date: "2024-07-13",
+        mamono: false
+      }
+    ]
   },
   {
     title: "OSAKA GIGANTIC MUSIC FESTIVAL 2024",
-    detail: {
-      date: "2024-07-20",
-      mamono: true
-    }
+    detail: [
+      {
+        date: "2024-07-20",
+        mamono: true
+      }
+    ]
   },
   {
     title: "TOKYO IDOL FESTIVAL 2024",
-    detail: {
-      date: "2024-08-04",
-      mamono: false
-    }
+    detail: [
+      {
+        date: "2024-08-04",
+        mamono: false
+      }
+    ]
   },
   {
     title: "日向坂46 「四期生ライブ」",
@@ -103,10 +115,12 @@ const lives: Live[] = [
   },
   {
     title: "Song for 能登！24時間テレビチャリティーライブ",
-    detail: {
-      date: "2024-08-31",
-      mamono: true
-    }
+    detail: [
+      {
+        date: "2024-08-31",
+        mamono: true
+      }
+    ]
   },
   {
     title: "ひなたフェス2024",
@@ -144,7 +158,8 @@ const lives: Live[] = [
 ]
 
 const mamonoRank = (countParticipated: number, countMamono: number): string => {
-  const maxParticipated = lives.length
+  const maxParticipated = lives.map(e => e.detail.length)
+                               .reduce((s, e) => s + e, 0)
   if (countParticipated === maxParticipated) {
     return "魔物"
   } else if (countMamono >= 10) {
@@ -158,8 +173,10 @@ const mamonoRank = (countParticipated: number, countMamono: number): string => {
   }
 }
 
-const getDateString = (date: Date): string => {
-  return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
+const getDateString = (date: string): string => {
+  // const newDate = new Date(date)
+  // return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
+  return date.replaceAll("-", "/")
 }
 
 const Home = () => {
@@ -190,31 +207,18 @@ const Home = () => {
         <h1 className="text-3xl font-bold mb-10 flex justify-center">見たことない魔物カウンター</h1>
         <div className="flex flex-col gap-4 mb-8">
           {lives.map(live => {
-            if (Array.isArray(live.detail)) {
-              return live.detail.map((stage, i) => {
-                const no = stage.no ? stage.no : "Day" + (i + 1)
-                const info = stage.info ? ` (${stage.info})` : ""
-                const datestr = getDateString(new Date(stage.date))
-                const label = `${live.title} ${no}${info} (${datestr})`
-                return (
-                  <label key={label}>
+            return live.detail.map((stage, i) => {
+              const no = stage.no ? stage.no : (live.detail.length > 1 ? "Day" + (i + 1) : "")
+              const info = stage.info ? ` (${stage.info})` : ""
+              const datestr = getDateString(stage.date)
+              const label = `${live.title} ${no}${info} (${datestr})`
+              return (
+                <label key={label}>
                     <input type="checkbox" value={Number(stage.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
                     {label}
                   </label>
-                )
-              })
-            } else {
-              const datestr = getDateString(new Date(live.detail.date))
-              const info = live.detail.info ? ` (${live.detail.info})` : ""
-              const label = `${live.title}${info} (${datestr})`
-              return (
-                <label key={label}>
-                  <input type="checkbox" value={Number(live.detail.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
-                  {label}
-                </label>
-              )
-            }
-          })}
+              )})
+            })}
         </div>
         <div className="flex justify-center mb-8">
           <button className="border-neutral-500 border-2 border-spacing-2 rounded" onClick={calculate}>計算する</button>
