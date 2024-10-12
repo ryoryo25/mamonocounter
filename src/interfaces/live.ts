@@ -2,7 +2,7 @@ import LiveDetail from "./liveDetail"
 
 type Live = {
   title: string
-  detail: LiveDetail | LiveDetail[]
+  details: LiveDetail[]
 }
 
 export default Live
