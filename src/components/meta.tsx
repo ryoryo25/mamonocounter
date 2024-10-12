@@ -1,8 +1,8 @@
 import url from "@/utils/config"
-import Head from "next/head"
 
 const Meta = () => {
   return (
+    // eslint-disable-next-line @next/next/no-head-element
     <head>
       <link
         rel="icon"
