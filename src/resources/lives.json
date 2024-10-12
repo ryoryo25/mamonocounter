@@ -1,121 +1,212 @@
 [
-    {
-      "title": "ユニ春！ライブ2024",
-      "detail": {
+  {
+    "title": "ユニ春！ライブ2024",
+    "details": [
+      {
         "date": "2024-03-09",
         "mamono": true
       }
-    },
-    {
-      "title": "齊藤京子卒業コンサート",
-      "detail": {
+    ]
+  },
+  {
+    "title": "齊藤京子卒業コンサート",
+    "details": [
+      {
         "date": "2024-04-05",
         "mamono": false
       }
-    },
-    {
-      "title": "5回目のひな誕祭",
-      "detail": [
-        {
-          "date": "2024-04-06",
-          "mamono": true
-        },
-        {
-          "date": "2024-04-07",
-          "mamono": true
-        }
-      ]
-    },
-    {
-      "title": "CHAGU CHAGU ROCK FESTIVAL 2024",
-      "detail": {
+    ]
+  },
+  {
+    "title": "5回目のひな誕祭",
+    "details": [
+      {
+        "date": "2024-04-06",
+        "mamono": true
+      },
+      {
+        "date": "2024-04-07",
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "CHAGU CHAGU ROCK FESTIVAL 2024",
+    "details": [
+      {
         "date": "2024-06-08",
         "mamono": false
       }
-    },
-    {
-      "title": "11th Single ひなた坂46 LIVE",
-      "detail": [
-        {
-          "date": "2024-07-03",
-          "mamono": false
-        },
-        {
-          "date": "2024-07-04",
-          "mamono": false,
-          "info": "高本彩花卒セレ"
-        }
-      ]
-    },
-    {
-      "title": "OSAKA GIGANTIC MUSIC FESTIVAL 2024",
-      "detail": {
+    ]
+  },
+  {
+    "title": "11th Single ひなた坂46 LIVE",
+    "details": [
+      {
+        "date": "2024-07-03",
+        "mamono": false
+      },
+      {
+        "date": "2024-07-04",
+        "mamono": false,
+        "info": "高本彩花卒セレ🍒"
+      }
+    ]
+  },
+  {
+    "title": "J-WAVE presents INSPIRE TOKYO 2024 -Best Music & Market-",
+    "details": [
+      {
+        "date": "2024-07-13",
+        "mamono": false
+      }
+    ]
+  },
+  {
+    "title": "OSAKA GIGANTIC MUSIC FESTIVAL 2024",
+    "details": [
+      {
         "date": "2024-07-20",
         "mamono": true
       }
-    },
-    {
-      "title": "TOKYO IDOL FESTIVAL 2024",
-      "detail": {
+    ]
+  },
+  {
+    "title": "TOKYO IDOL FESTIVAL 2024",
+    "details": [
+      {
         "date": "2024-08-04",
         "mamono": false
       }
-    },
-    {
-      "title": "日向坂46 「四期生ライブ」",
-      "detail": [
-        {
-          "date": "2024-08-27",
-          "mamono": true
-        },
-        {
-          "date": "2024-08-28",
-          "mamono": true
-        },
-        {
-          "date": "2024-08-29",
-          "mamono": true
-        }
-      ]
-    },
-    {
-      "title": "Song for 能登！24時間テレビチャリティーライブ",
-      "detail": {
+    ]
+  },
+  {
+    "title": "日向坂46 「四期生ライブ」",
+    "details": [
+      {
+        "date": "2024-08-27",
+        "mamono": true
+      },
+      {
+        "date": "2024-08-28",
+        "mamono": true
+      },
+      {
+        "date": "2024-08-29",
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "Song for 能登！24時間テレビチャリティーライブ",
+    "details": [
+      {
         "date": "2024-08-31",
         "mamono": true
       }
-    },
-    {
-      "title": "ひなたフェス2024",
-      "detail": [
-        {
-          "date": "2024-09-07",
-          "mamono": true
-        },
-        {
-          "date": "2024-09-08",
-          "mamono": true
-        }
-      ]
-    },
-    {
-      "title": "日向坂ミュージックパレードLIVE",
-      "detail": [
-        {
-          "date": "2024-10-05",
-          "mamono": true,
-          "no": "Day1夜公演"
-        },
-        {
-          "date": "2024-10-06",
-          "mamono": true,
-          "no": "Day2昼公演"
-        },
-        {
-          "date": "2024-10-06",
-          "mamono": true,
-          "no": "Day2夜公演"
-        }
-      ]
-    }
-  ]
+    ]
+  },
+  {
+    "title": "ひなたフェス2024",
+    "details": [
+      {
+        "date": "2024-09-07",
+        "mamono": true
+      },
+      {
+        "date": "2024-09-08",
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "日向坂ミュージックパレードLIVE",
+    "details": [
+      {
+        "date": "2024-10-05",
+        "mamono": true,
+        "no": "Day1夜公演"
+      },
+      {
+        "date": "2024-10-06",
+        "mamono": true,
+        "no": "Day2昼公演"
+      },
+      {
+        "date": "2024-10-06",
+        "mamono": true,
+        "no": "Day2夜公演"
+      }
+    ]
+  },
+  {
+    "title": "12th Single ひなた坂46 LIVE",
+    "details": [
+      {
+        "date": "2024-10-23",
+        "mamono": false,
+        "disabled": true
+      },
+      {
+        "date": "2024-10-24",
+        "mamono": false,
+        "disabled": true
+      }
+    ]
+  },
+  {
+    "title": "全国ツアー2024 (タイトル未定)",
+    "details": [
+      {
+        "date": "2024-11-19",
+        "mamono": true,
+        "no": "兵庫公演 Day1",
+        "disabled": true
+      },
+      {
+        "date": "2024-11-20",
+        "mamono": true,
+        "no": "兵庫公演 Day2",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-04",
+        "mamono": true,
+        "no": "福岡公演 Day1",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-05",
+        "mamono": true,
+        "no": "福岡公演 Day2",
+        "info": "濱岸ひより卒セレ🐤",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-10",
+        "mamono": true,
+        "no": "愛知公演 Day1",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-11",
+        "mamono": true,
+        "no": "愛知公演 Day2",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-25",
+        "mamono": true,
+        "no": "東京公演 Day1 in 東京ドーム🥚",
+        "info": "加藤史帆卒セレ🐻",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-26",
+        "mamono": true,
+        "no": "東京公演 Day2 in 東京ドーム🥚",
+        "disabled": true
+      }
+    ]
+  }
+]

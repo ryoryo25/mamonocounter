@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { roboto, notojp } from "../utils/font";
+import { roboto, notojp } from "@/utils/font";
 import "./globals.css";
 
 export const metadata: Metadata = {
