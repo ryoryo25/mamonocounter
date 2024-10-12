@@ -12,6 +12,7 @@ type LiveDetail = {
   mamono: boolean
   no?: string
   info?: string
+  disabled?: boolean
 }
 
 const lives: Live[] = [
@@ -65,7 +66,7 @@ const lives: Live[] = [
       {
         date: "2024-07-04",
         mamono: false,
-        info: "高本彩花卒セレ"
+        info: "高本彩花卒セレ🍒"
       }
     ]
   },
@@ -154,11 +155,81 @@ const lives: Live[] = [
         no: "Day2夜公演"
       }
     ]
+  },
+  {
+    title: "12th Single ひなた坂46 LIVE",
+    detail: [
+      {
+        date: "2024-10-23",
+        mamono: false,
+        disabled: true
+      },
+      {
+        date: "2024-10-24",
+        mamono: false,
+        disabled: true
+      }
+    ]
+  },
+  {
+    title: "全国ツアー2024 (タイトル未定)",
+    detail: [
+      {
+        date: "2024-11-19",
+        mamono: true,
+        no: "兵庫公演 Day1",
+        disabled: true
+      },
+      {
+        date: "2024-11-20",
+        mamono: true,
+        no: "兵庫公演 Day2",
+        disabled: true
+      },
+      {
+        date: "2024-12-04",
+        mamono: true,
+        no: "福岡公演 Day1",
+        disabled: true
+      },
+      {
+        date: "2024-12-05",
+        mamono: true,
+        no: "福岡公演 Day2",
+        info: "濱岸ひより卒セレ🐤",
+        disabled: true
+      },
+      {
+        date: "2024-12-10",
+        mamono: true,
+        no: "愛知公演 Day1",
+        disabled: true
+      },
+      {
+        date: "2024-12-11",
+        mamono: true,
+        no: "愛知公演 Day2",
+        disabled: true
+      },
+      {
+        date: "2024-12-25",
+        mamono: true,
+        no: "東京公演 Day1 in 東京ドーム🥚",
+        info: "加藤史帆卒セレ🐻",
+        disabled: true
+      },
+      {
+        date: "2024-12-26",
+        mamono: true,
+        no: "東京公演 Day2 in 東京ドーム🥚",
+        disabled: true
+      }
+    ]
   }
 ]
 
 const mamonoRank = (countParticipated: number, countMamono: number): string => {
-  const maxParticipated = lives.map(e => e.detail.length)
+  const maxParticipated = lives.map(l => l.detail.filter(s => !s.disabled).length)
                                .reduce((s, e) => s + e, 0)
   if (countParticipated === maxParticipated) {
     return "魔物"
@@ -213,8 +284,8 @@ const Home = () => {
               const datestr = getDateString(stage.date)
               const label = `${live.title} ${no}${info} (${datestr})`
               return (
-                <label key={label}>
-                    <input type="checkbox" value={Number(stage.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} />
+                <label key={label} className={stage.disabled ? "text-neutral-400" : ""}>
+                    <input type="checkbox" value={Number(stage.mamono)} className="mr-2" onChange={(event) => checkboxChange(event)} disabled={stage.disabled} />
                     {label}
                   </label>
               )})
