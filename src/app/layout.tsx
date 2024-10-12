@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
 import { roboto, notojp } from "@/utils/font";
 import "./globals.css";
+import Meta from "@/components/meta";
+import { ASSETS_PREFIX, DESCRIPTION, TITLE } from "@/libs/constants";
+import url from "@/utils/config";
 
 export const metadata: Metadata = {
-  title: "見たことない魔物カウンター",
-  description: "何回「見たことない魔物」を見たかをカウント",
-};
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "website",
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: TITLE,
+    images: {
+      url: url(`${ASSETS_PREFIX}/og.png`)
+    }
+  }
+}
 
 export default function RootLayout({
   children,
@@ -14,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <Meta />
       <body
         className={`${roboto.variable} ${notojp.variable} antialiased font-sans`}
       >
