@@ -1,8 +1,6 @@
 import { ButtonHTMLAttributes } from "react"
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
-
-const Button = ({ className, children, ...props}: Props) => {
+const Button = ({ className, children, ...props}: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button className={`border-neutral-500 border-2 border-spacing-2 rounded ${className}`} {...props} >
       {children}
