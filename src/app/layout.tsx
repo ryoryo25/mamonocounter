@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { roboto, notojp } from "@/utils/font";
 import "./globals.css";
 import Meta from "@/components/meta";
-import { ASSETS_PREFIX, DESCRIPTION, TITLE } from "@/libs/constants";
-import url from "@/utils/config";
+import { DESCRIPTION, OG_IMAGE, TITLE } from "@/libs/constants";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -14,8 +13,8 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     siteName: TITLE,
     images: {
-      url: url(`${ASSETS_PREFIX}/og.png`)
-    }
+      url: OG_IMAGE
+    },
   }
 }
 

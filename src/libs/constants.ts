@@ -4,3 +4,5 @@ export const DESCRIPTION = "あなたが何回「見たことない魔物」を�
 export const SITE_URL = "https://ryoryo25.github.io/mamonocounter/"
 
 export const ASSETS_PREFIX = "/assets/mamonocounter"
+
+export const OG_IMAGE = "https://ryoryo25.github.io/mamonocounter/assets/mamonocounter/og.png"
