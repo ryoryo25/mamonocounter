@@ -28,6 +28,7 @@ const RootLayout = ({
   return (
     <html lang="ja">
       <Meta />
+      {/* https://nextjs.org/docs/app/building-your-application/optimizing/third-party-libraries#google-analytics */}
       <GoogleAnalytics gaId={GA_MEASUREMENT_ID}/>
       <body
         className={`${roboto.variable} ${notojp.variable} antialiased font-sans`}
