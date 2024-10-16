@@ -76,9 +76,7 @@ jobs:
       - name: Build with Next.js
         env:
           GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
-        run: |
-          echo "GA_MEASUREMENT_DI: ${{ secrets.GA_MEASUREMENT_ID }}"
-          ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Generate sitemap.xml
         env:
           SITE_URL: 'https://ryoryo25.github.io/mamonocounter/'
