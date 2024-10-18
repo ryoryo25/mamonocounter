@@ -208,5 +208,22 @@
         "disabled": true
       }
     ]
+  },
+  {
+    "title": "丹生明里 卒業セレモニー🐸🥕",
+    "details": [
+      {
+        "date": "2024-11-30",
+        "mamono": false,
+        "no": "GAME DAY",
+        "disabled": true
+      },
+      {
+        "date": "2024-12-01",
+        "mamono": false,
+        "no": "LIVE DAY",
+        "disabled": true
+      }
+    ]
   }
 ]
