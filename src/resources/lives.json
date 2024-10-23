@@ -144,8 +144,7 @@
     "details": [
       {
         "date": "2024-10-23",
-        "mamono": false,
-        "disabled": true
+        "mamono": false
       },
       {
         "date": "2024-10-24",
