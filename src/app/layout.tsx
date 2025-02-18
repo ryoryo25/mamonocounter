@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { roboto, notojp } from "@/utils/font";
+import { roboto, notojp, notoemoji } from "@/utils/font";
 import "./globals.css";
 import Meta from "@/components/meta";
 import { DESCRIPTION, OG_IMAGE, TITLE } from "@/libs/constants";
@@ -31,7 +31,7 @@ const RootLayout = ({
       {/* https://nextjs.org/docs/app/building-your-application/optimizing/third-party-libraries#google-analytics */}
       <GoogleAnalytics gaId={GA_MEASUREMENT_ID}/>
       <body
-        className={`${roboto.variable} ${notojp.variable} antialiased font-sans`}
+        className={`${notoemoji.variable} ${roboto.variable} ${notojp.variable} antialiased font-sans`}
       >
         {children}
       </body>
