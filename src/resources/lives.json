@@ -213,5 +213,37 @@
         "no": "LIVE DAY"
       }
     ]
+  },
+  {
+    "title": "🍓東村芽依 卒業セレモニー🐱",
+    "details": [
+      {
+        "date": "2025-01-25",
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "日向坂ミュージックパレードLIVE -2025-",
+    "details": [
+      {
+        "date": "2025-02-22",
+        "mamono": true,
+        "disabled": true,
+        "no": "Day1 夜公演"
+      },
+      {
+        "date": "2025-02-23",
+        "mamono": true,
+        "disabled": true,
+        "no": "Day2 昼公演"
+      },
+      {
+        "date": "2025-02-23",
+        "mamono": true,
+        "disabled": true,
+        "no": "Day2 夜公演"
+      }
+    ]
   }
 ]
