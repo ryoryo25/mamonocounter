@@ -253,5 +253,15 @@
         "no": "Day2 夜公演"
       }
     ]
+  },
+  {
+    "title": "CREATEs presents IDOL RUNWAY COLLECTION 2025 Supported by TGC",
+    "details": [
+      {
+        "date": "2025-03-02",
+        "disabled": true,
+        "mamono": true
+      }
+    ]
   }
 ]
