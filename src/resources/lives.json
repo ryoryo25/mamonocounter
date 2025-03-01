@@ -261,5 +261,22 @@
         "mamono": true
       }
     ]
+  },
+  {
+    "title": "6回目のひな誕祭",
+    "details": [
+      {
+        "date": "2025-04-05",
+        "disabled": true,
+        "mamono": true,
+        "info": "佐々木美玲卒セレ🍞"
+      },
+      {
+        "date": "2025-04-06",
+        "disabled": true,
+        "mamono": true,
+        "info": "佐々木久美卒セレ🦒"
+      }
+    ]
   }
 ]
