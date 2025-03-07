@@ -257,8 +257,7 @@
     "details": [
       {
         "date": "2025-03-02",
-        "disabled": true,
-        "mamono": true
+        "mamono": false
       }
     ]
   },
