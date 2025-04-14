@@ -275,5 +275,67 @@
         "info": "佐々木久美卒セレ🦒"
       }
     ]
+  },
+  {
+    "title": "13th Single ひなた坂46 LIVE",
+    "details": [
+      {
+        "date": "2025-04-30",
+        "disabled": true,
+        "mamono": false
+      },
+      {
+        "date": "2025-05-01",
+        "disabled": true,
+        "mamono": false,
+        "info": "高瀬愛奈卒セレ🐹"
+      }
+    ]
+  },
+  {
+    "title": "日向坂46 五期生 「おもてなし会」",
+    "details": [
+      {
+        "date": "2025-05-27",
+        "disabled": true,
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "日向坂46 BRAND NEW LIVE 2025 「OVER THE RAINBOW」",
+    "details": [
+      {
+        "date": "2025-05-28",
+        "disabled": true,
+        "mamono": true
+      },
+      {
+        "date": "2025-05-29",
+        "disabled": true,
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "CHAGU CHAGU ROCK FESTIVAL 2025",
+    "details": [
+      {
+        "date": "2025-06-07",
+        "disabled": true,
+        "mamono": false
+      }
+    ]
+  },
+  {
+    "title": "SORAON2025 supported by Hokkaido Airports 〜空飛ぶ愛と、音楽と〜",
+    "details": [
+      {
+        "date": "2025-06-21",
+        "disabled": true,
+        "mamono": false,
+        "info": "4期生"
+      }
+    ]
   }
 ]
