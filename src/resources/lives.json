@@ -336,5 +336,35 @@
         "info": "4期生"
       }
     ]
+  },
+  {
+    "title": "日向坂46 四期生ライブ Presented by 新・日向坂ミュージックパレード",
+    "details": [
+      {
+        "date": "2025-07-29",
+        "disabled": true,
+        "mamono": true
+      },
+      {
+        "date": "2025-07-30",
+        "disabled": true,
+        "mamono": true
+      },
+      {
+        "date": "2025-07-31",
+        "disabled": true,
+        "mamono": true
+      }
+    ]
+  },
+  {
+    "title": "LuckyFes 2025",
+    "details": [
+      {
+        "date": "2025-08-09",
+        "disabled": true,
+        "mamono": false
+      }
+    ]
   }
 ]
