@@ -296,8 +296,7 @@
     "details": [
       {
         "date": "2025-05-27",
-        "disabled": true,
-        "mamono": true
+        "mamono": false
       }
     ]
   },
@@ -306,12 +305,10 @@
     "details": [
       {
         "date": "2025-05-28",
-        "disabled": true,
         "mamono": true
       },
       {
         "date": "2025-05-29",
-        "disabled": true,
         "mamono": true
       }
     ]
@@ -332,7 +329,7 @@
       {
         "date": "2025-06-21",
         "disabled": true,
-        "mamono": false,
+        "mamono": true,
         "info": "4期生"
       }
     ]
