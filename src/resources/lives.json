@@ -363,5 +363,75 @@
         "mamono": false
       }
     ]
+  },
+  {
+    "title": "全国ツアー2025 「タイトル未定」",
+    "details": [
+      {
+        "date": "2025-09-20",
+        "mamono": true,
+        "no": "宮城公演 Day1"
+      },
+      {
+        "date": "2025-09-21",
+        "mamono": true,
+        "no": "宮城公演 Day2"
+      },
+      {
+        "date": "2025-09-27",
+        "mamono": true,
+        "no": "広島公演 Day1"
+      },
+      {
+        "date": "2025-09-28",
+        "mamono": true,
+        "no": "広島公演 Day2"
+      },
+      {
+        "date": "2025-10-01",
+        "mamono": true,
+        "no": "福岡公演 Day1"
+      },
+      {
+        "date": "2025-10-02",
+        "mamono": true,
+        "no": "福岡公演 Day2"
+      },
+      {
+        "date": "2025-10-13",
+        "mamono": true,
+        "no": "愛知公演 Day1"
+      },
+      {
+        "date": "2025-10-14",
+        "mamono": true,
+        "no": "愛知公演 Day2"
+      },
+      {
+        "date": "2025-10-22",
+        "mamono": true,
+        "no": "大阪公演 Day1"
+      },
+      {
+        "date": "2025-10-23",
+        "mamono": true,
+        "no": "大阪公演 Day2"
+      },
+      {
+        "date": "2025-11-19",
+        "mamono": true,
+        "no": "東京公演 Day1"
+      },
+      {
+        "date": "2025-11-20",
+        "mamono": true,
+        "no": "東京公演 Day2"
+      },
+      {
+        "date": "2025-11-21",
+        "mamono": true,
+        "no": "東京公演 Day3"
+      }
+    ]
   }
 ]
