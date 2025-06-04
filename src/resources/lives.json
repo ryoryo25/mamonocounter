@@ -369,66 +369,79 @@
     "details": [
       {
         "date": "2025-09-20",
+        "disabled": true,
         "mamono": true,
         "no": "宮城公演 Day1"
       },
       {
         "date": "2025-09-21",
+        "disabled": true,
         "mamono": true,
         "no": "宮城公演 Day2"
       },
       {
         "date": "2025-09-27",
+        "disabled": true,
         "mamono": true,
         "no": "広島公演 Day1"
       },
       {
         "date": "2025-09-28",
+        "disabled": true,
         "mamono": true,
         "no": "広島公演 Day2"
       },
       {
         "date": "2025-10-01",
+        "disabled": true,
         "mamono": true,
         "no": "福岡公演 Day1"
       },
       {
         "date": "2025-10-02",
+        "disabled": true,
         "mamono": true,
         "no": "福岡公演 Day2"
       },
       {
         "date": "2025-10-13",
+        "disabled": true,
         "mamono": true,
         "no": "愛知公演 Day1"
       },
       {
         "date": "2025-10-14",
+        "disabled": true,
         "mamono": true,
         "no": "愛知公演 Day2"
       },
       {
         "date": "2025-10-22",
+        "disabled": true,
         "mamono": true,
         "no": "大阪公演 Day1"
       },
       {
         "date": "2025-10-23",
+        "disabled": true,
         "mamono": true,
         "no": "大阪公演 Day2"
       },
       {
         "date": "2025-11-19",
+        "disabled": true,
         "mamono": true,
         "no": "東京公演 Day1"
       },
       {
         "date": "2025-11-20",
+        "disabled": true,
         "mamono": true,
         "no": "東京公演 Day2"
       },
       {
         "date": "2025-11-21",
+        "disabled": true,
         "mamono": true,
         "no": "東京公演 Day3"
       }
